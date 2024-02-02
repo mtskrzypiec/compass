@@ -1,0 +1,15 @@
+project:
+  name: '{project_name}'
+  product: isklep
+  driver:
+    name: docker
+
+  steps:
+    - name: "Creating project directory"
+      action: "build_path"
+      arguments:
+        path: '{path}'
+    - name: "Cloning git repo"
+      action: "git_clone"
+      arguments:
+        git_url: "ssh://git@gitlab.i-systems.pl:10210/main/isklep.git"

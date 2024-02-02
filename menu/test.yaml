@@ -1,0 +1,9 @@
+menu:
+  name: "Main menu"
+  children:
+    - name: "Test menu action {project_name}"
+      action: "exec_host"
+      arguments:
+        commands:
+         - "echo '{message}'"
+
