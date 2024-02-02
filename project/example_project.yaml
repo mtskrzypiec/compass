@@ -3,8 +3,8 @@ project:
   product: isklep
   driver:
     name: docker
-
-  steps:
+    compose_path: ""
+  init_steps:
     - name: "Creating project directory"
       action: "build_path"
       arguments:
@@ -13,3 +13,7 @@ project:
       action: "git_clone"
       arguments:
         git_url: "ssh://git@gitlab.i-systems.pl:10210/main/isklep.git"
+        path: "{path}"
+  running_steps:
+    - name: "Driver up"
+      action: "diver_up"

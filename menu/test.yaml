@@ -1,9 +1,7 @@
 menu:
-  name: "Main menu"
+  name: "Main Menu"
   children:
-    - name: "Test menu action {project_name}"
-      action: "exec_host"
+    - name: "Project Info {obj_project.getName()}"
+      action: "show_project"
       arguments:
-        commands:
-         - "echo '{message}'"
-
+        project_name: "{obj_project.getName()}"

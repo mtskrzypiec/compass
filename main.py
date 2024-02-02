@@ -1,10 +1,15 @@
 from cli.command import command_registry, abstract_command
 from menu import menu
 
-menu = menu.Menu('/Users/mateusz/msys/menu/test.yaml', {"project_name": "Chciałbym już przejść do DevOps :P", "message": "Zajebisty ten projekt"})
+class Project:
+
+    def getName(self):
+        return "kids51015"
+
+
+menu = menu.Menu('/Users/mateusz/msys/menu/test.yaml', {"user_name": "Mateusz", "obj_project": Project()})
 
 menu.print()
-
 
 # class TestCommand(abstract_command.AbstractCommand):
 #     def configure_arguments(self, subparsers):
