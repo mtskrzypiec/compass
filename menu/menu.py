@@ -3,10 +3,11 @@ import yaml
 
 from menu import picker
 
+
 class Menu:
     def __init__(self, path: str, arguments=None):
         self.header = ""
-        self.config = []
+        self.config= []
         if arguments is None:
             self.arguments = {}
         else:
@@ -80,11 +81,14 @@ class Menu:
             elif isinstance(value, dict):
                 dict_[key] = self.replace_variables_in_dict(value)
             elif isinstance(value, list):
-                dict_[key] = [self.replace_variables(item) if isinstance(item, str) else self.replace_variables_in_dict(item) if isinstance(item, dict) else item for item in value]
+                dict_[key] = [self.replace_variables(item) if isinstance(item, str) else self.replace_variables_in_dict(
+                    item) if isinstance(item, dict) else item for item in value]
         return dict_
 
     def print(self):
-        picker.pick(title=self.header, options=self.config, indicator="x", options_map_func=get_option_label, should_filter_options=True)
+        picker.pick(title=self.header, options=self.config, indicator="x", options_map_func=get_option_label,
+                    should_filter_options=True)
+
 
 def get_option_label(option):
     return option[0]

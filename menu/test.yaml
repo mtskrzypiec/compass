@@ -1,7 +1,7 @@
 menu:
   name: "Main Menu"
   children:
-    - name: "Project Info {obj_project.getName()}"
+    - name: "Project Info {user_name}"
       action: "show_project"
       arguments:
-        project_name: "{obj_project.getName()}"
+        project_name: "{user_name}"

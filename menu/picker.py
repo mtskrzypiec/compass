@@ -237,15 +237,7 @@ class Picker(object):
 
 def pick(options, title=None, indicator='*', default_index=0, multi_select=False, min_selection_count=0,
          options_map_func=None, should_filter_options=False, select_all=False, map_options=True):
-    """Construct and start a :class:`Picker <Picker>`.
 
-    Usage::
-
-      >>> from pick import pick
-      >>> title = 'Please choose an option: '
-      >>> options = ['option1', 'option2', 'option3']
-      >>> option, index = pick(options, title)
-    """
     picker = Picker(options, title, indicator, default_index, multi_select, min_selection_count, options_map_func,
                     should_filter_options, select_all, map_options)
 

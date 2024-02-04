@@ -1,15 +1,22 @@
-from cli.command import command_registry, abstract_command
-from menu import menu
+import application
 
-class Project:
+application.run()
 
-    def getName(self):
-        return "kids51015"
-
-
-menu = menu.Menu('/Users/mateusz/msys/menu/test.yaml', {"user_name": "Mateusz", "obj_project": Project()})
-
-menu.print()
+# from cli.command import command_registry, abstract_command
+# from menu import menu
+#
+# class Project:
+#
+#     def __init__(self):
+#         self.name = "Name"
+#
+#     def getName(self):
+#         return "kids51015"
+#
+#TODO add event for building menu context
+# menu = menu.Menu('/Users/mateusz/msys/menu/test.yaml', {"user_name": "Mateusz"})
+# #
+# menu.print()
 
 # class TestCommand(abstract_command.AbstractCommand):
 #     def configure_arguments(self, subparsers):
